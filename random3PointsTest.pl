@@ -20,11 +20,8 @@ validPoint3Format(Point3) :-
     (Point3 \= []), length(Point3, 3), (Point3 = [[_,_,_],[_,_,_],[_,_,_]]).
 
 % test randm3Points with multiple points
-testRandomPoints :-
-    write('Tesing random'), nl,
-    read_xyz_file('data/Point_Cloud_1_No_Road_Reduced.xyz', Points),
-    write('Point Cloud loaded. Size : '), length(Points, L), 
-    write(L), nl,
+testRandomPoints(Points) :-
+    write('Tesing random3Points'), nl,
     write('Testing for points not in point cloud 1: '), nl,
     pointsList1(Point1),
     write('Points: '), write(Point1), nl,
@@ -41,7 +38,7 @@ testRandomPoints :-
     invalidPointsList2(Point4),
     write('Points: '), write(Point4), nl,
     write('Result: '), printResult(Points, Point4), nl,
-    write('Testing completed for random3Points').
+    write('Testing completed for random3Points'), nl.
 
 % print result of random3Points
 printResult(Points, Point) :-

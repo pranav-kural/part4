@@ -1,8 +1,6 @@
 read_xyz_file(File, Points) :-
   open(File, read, Stream),
-  write('file open'), nl,
   read_xyz_points(Stream,Output),
-  write('done reading'), nl,
   without_first(Output, Points),
   close(Stream), !.
 
