@@ -1,14 +1,7 @@
 % Testing plane
 
-% test data
-testPoints(X) :- 
-  X = [
-  [11.41738472, -2.858225095, 0.962476455],
-  [3.408226942, -0.062265186, -0.12261193],
-  [11.64480557, 7.586239857, 3.792138564]
-].
-actualPlane(X) :- 
-  X = [-19.24478941973517,-22.416438566567404,84.2872272864299,74.52946568859088].
+% import test data
+:- [testData].
 
 % given the above sample data, if Point3 is same as PointList1, then check if Plane is same as Plane1
 plane(Point3, Plane) :-
@@ -35,9 +28,9 @@ diff(P1, P2, D) :-
   nth0(0, P1, P1X), nth0(1, P1, P1Y), nth0(2, P1, P1Z),
   D = [P2X - P1X, P2Y - P1Y, P2Z - P1Z].
 
+% initiate the test
 testPlane :- 
-  testPoints(TP), actualPlane(AP),
+  planeTestPoints(TP), planeTestActualResult(AP),
   plane(TP, Plane),
-  %write(Plane), nl,
   Plane = AP.
 

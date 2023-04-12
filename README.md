@@ -1,14 +1,23 @@
-## RANSAC Prolog
+# CSI2120 Project 4
 
-To test the ability to read point cloud, you can run the `test.pl`
+Testing RANSAC implementation using Prolog
 
-    $ swipl test.pl
+## Usage
 
-Once repl has started, you can initiate the test function:
+The file `mainTest.pl` contains the method `runTests` for initiating all tests.
 
-    ?- testReadingFile.
+From terminal:
 
-This will read the file name **hardcoded** in the `test.pl` file. You can change the file name to test other point cloud files.
+    $ swipl mainTest.pl
 
-### Sample Output
-<img src="https://user-images.githubusercontent.com/17651852/231315634-3ab4c8bb-3162-4c86-a0c1-089d5bebbaff.jpeg" width="500"/>
+Once repl has started, you can initiate the tests:
+
+    ?- runTests.
+
+## Tests Data
+
+The Point Cloud file name is **hardcoded** in the `mainTest.pl` file in the `loadPointCloud` function.
+
+Current tests cases use data based on the **Point Cloud 1** dataset.
+
+All test data is stored in the `testData.pl` file. If you want to test with a different point cloud, please update test data accordingly.
