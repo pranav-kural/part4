@@ -2,6 +2,8 @@
 
 Testing RANSAC implementation using Prolog. Built as part of coursework for [CSI2120 - Programming Paradigms](https://catalogue.uottawa.ca/search/?P=CSI%202120)
 
+[Project GitHub Repo](https://github.com/pranav-kural/ransac-prolog)
+
 ## Usage
 
 The file `mainTest.pl` contains the method `runTests` for initiating all tests.
