@@ -12,7 +12,7 @@ read_xyz_points(Stream, []) :-
 read_xyz_points(Stream, [Point|Points]) :-
   read_line_to_string(Stream,L),
   split_string(L, "\t", "\s\t\n", XYZ),
-  write('Point read = '), write(XYZ), nl, % comment out to see points being read
+  %write('Point read = '), write(XYZ), nl, % comment out to see points being read
   % if XYZ is "x y z" then do nothing and read next
   % otherwise convert to float and add to list
   (XYZ = ["x","y","z"] -> 
